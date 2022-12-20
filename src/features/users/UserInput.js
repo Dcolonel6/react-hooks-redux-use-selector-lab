@@ -14,11 +14,15 @@ function UserInput() {
       ...formData,
       [event.target.id]: event.target.value,
     });
+    
+    
   }
 
   function handleOnSubmit(event) {
     event.preventDefault();
     dispatch({ type: "users/add", payload: formData });
+    //console.log(event)
+    event.target.reset()
   }
 
   return (
